@@ -273,6 +273,19 @@ try{
 
 	@Override
 	public void bubbleSort() {
+		double temp;
+		for(int i=0; i<students.length-1; i++)
+		{
+			for(int j=i+1; j<students.length-1-i; j++)
+			{
+				if(students[j].getAvgMark()>students[j+1].getAvgMark())
+				{
+					temp = students[j].getAvgMark();
+					students[j].setAvgMark(students[j+1].getAvgMark());
+					students[j+1].setAvgMark(temp);
+				}
+			}
+		}
 	
 		// Add your implementation here
 	}
